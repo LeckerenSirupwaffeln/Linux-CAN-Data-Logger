@@ -10,7 +10,6 @@ setup(
     python_requires='>=3.7, <4',
     packages=find_packages(include=['app', 'app.*']),
     install_requires=[
-        'asyncio==3.4.3',
         'mysql-connector==2.2.9',
         'python-can==4.1.0',
     ],
