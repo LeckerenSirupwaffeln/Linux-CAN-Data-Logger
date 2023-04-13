@@ -1,15 +1,15 @@
 # Add the following lines for loopback-mode
 
 auto can0
-  iface can0 inet manual
-  pre-up /sbin/ip link set can0 type can bitrate 1000000 loopback on
-  up /sbin/ifconfig can0 up
-  down /sbin/ifconfig can0 down
+iface can0 inet manual
+    pre-up ip link set $IFACE type can bitrate 500000 listen-only off loopback on
+    up /sbin/ifconfig $IFACE up
+    down /sbin/ifconfig $IFACE down
 
 # Otherwise add these lines for normal-mode:
 
 auto can0
-  iface can0 inet manual
-  pre-up /sbin/ip link set can0 type can bitrate 1000000 loopback off
-  up /sbin/ifconfig can0 up
-  down /sbin/ifconfig can0 down
+iface can0 inet manual
+    pre-up ip link set $IFACE type can bitrate 500000 listen-only off
+    up /sbin/ifconfig $IFACE up
+    down /sbin/ifconfig $IFACE down
