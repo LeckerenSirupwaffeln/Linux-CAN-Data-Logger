@@ -12,5 +12,6 @@ setup(
     install_requires=[
         'mysql-connector==2.2.9',
         'python-can==4.1.0',
+        'pyinstaller==5.10.0',
     ],
 )
